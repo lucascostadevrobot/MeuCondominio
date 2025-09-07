@@ -12,7 +12,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
     @Id
-    private Integer id;
+    private Long id;
     @Column(name = "nome")
     private String nome;
     @Column(name = "user_name")
@@ -28,7 +28,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nome, String userName, String password, List<String> roles) {
+    public Usuario(Long id, String nome, String userName, String password, List<String> roles) {
         this.id = id;
         this.nome = nome;
         this.userName = userName;
@@ -40,7 +40,7 @@ public class Usuario {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
